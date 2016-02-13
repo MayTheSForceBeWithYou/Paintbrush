@@ -42,7 +42,7 @@
 		275110320F169A0800A67F22 /* COPYING.txt in Resources */ = {isa = PBXBuildFile; fileRef = 275110310F169A0800A67F22 /* COPYING.txt */; };
 		275C82DE0BAF98DC00F836FA /* SWPreferenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 275C82DC0BAF98DC00F836FA /* SWPreferenceController.m */; };
 		2774CC770C0A1D5100FE7F0F /* SWCurveTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2774CC750C0A1D5100FE7F0F /* SWCurveTool.m */; };
-		277FCC0F123C6E8300249A3F /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27A1CFC61226E8E000822B7D /* Sparkle.framework */; };
+		277FCC0F123C6E8300249A3F /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27A1CFC61226E8E000822B7D /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		277FCC84123DB70800249A3F /* PFMoveApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 277FCC83123DB70800249A3F /* PFMoveApplication.m */; };
 		277FCC95123DB74A00249A3F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 277FCC94123DB74A00249A3F /* Security.framework */; };
 		278BF71A0D4E47D40046BCA2 /* SWEyeDropperTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 278BF7190D4E47D40046BCA2 /* SWEyeDropperTool.m */; };
@@ -678,7 +678,7 @@
 			name = Test;
 			productName = Test;
 			productReference = 2706B83910ED702F00080D4A /* Test.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 		8D15AC270486D014006FF6A4 /* Paintbrush */ = {
 			isa = PBXNativeTarget;
@@ -705,7 +705,7 @@
 		2A37F4A9FDCFA73011CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0720;
 			};
 			buildConfigurationList = C05733CB08A9546B00998B17 /* Build configuration list for PBXProject "Paintbrush2" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -995,6 +995,7 @@
 					SenTestingKit,
 				);
 				PREBINDING = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompany.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Test;
 				WRAPPER_EXTENSION = octest;
 			};
@@ -1022,6 +1023,7 @@
 					SenTestingKit,
 				);
 				PREBINDING = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompany.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Test;
 				WRAPPER_EXTENSION = octest;
 				ZERO_LINK = NO;
@@ -1054,6 +1056,7 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				OTHER_CFLAGS = "-DDEBUG";
+				PRODUCT_BUNDLE_IDENTIFIER = com.soggywaffles.Paintbrush;
 				PRODUCT_NAME = Paintbrush;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1087,6 +1090,7 @@
 				GCC_PREFIX_HEADER = Paintbrush_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_BUNDLE_IDENTIFIER = com.soggywaffles.Paintbrush;
 				PRODUCT_NAME = Paintbrush;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1099,6 +1103,7 @@
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 2.0.0;
+				ENABLE_TESTABILITY = YES;
 				GCC_ALTIVEC_EXTENSIONS = YES;
 				GCC_ENABLE_SSE3_EXTENSIONS = YES;
 				GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS = YES;
