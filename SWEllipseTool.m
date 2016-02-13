@@ -45,9 +45,9 @@
 		end.y += 0.5;
 	}
 	if (flags & NSShiftKeyMask) {
-		CGFloat size = fmin(abs(end.x-begin.x),abs(end.y-begin.y));
-		NSInteger x = (end.x-begin.x) / abs(end.x-begin.x);
-		NSInteger y = (end.y-begin.y) / abs(end.y-begin.y);
+		CGFloat size = fmin(fabs(end.x-begin.x),fabs(end.y-begin.y));
+		NSInteger x = (end.x-begin.x) / fabs(end.x-begin.x);
+		NSInteger y = (end.y-begin.y) / fabs(end.y-begin.y);
 		[path appendBezierPathWithOvalInRect:NSMakeRect(begin.x, begin.y, x*size, y*size)];
 	} else {
 		[path appendBezierPathWithOvalInRect:NSMakeRect(begin.x, begin.y, (end.x - begin.x), (end.y - begin.y))];

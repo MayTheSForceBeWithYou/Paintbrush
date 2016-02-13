@@ -82,8 +82,8 @@
 		NSRect rect = [stringToInsert boundingRectWithSize:[stringToInsert size] 
 												   options:NSStringDrawingUsesFontLeading | NSStringDrawingUsesDeviceMetrics];
 		
-		CGFloat xOffset = abs(rect.origin.x);
-		CGFloat yOffset = abs(rect.origin.y);
+		CGFloat xOffset = fabs(rect.origin.x);
+		CGFloat yOffset = fabs(rect.origin.y);
 		rect.size.width += xOffset + textSize.width;
 		rect.size.height += yOffset + textSize.height;
 		

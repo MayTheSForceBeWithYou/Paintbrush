@@ -77,12 +77,12 @@
 	
 	if (flags & NSShiftKeyMask)
 	{
-		CGFloat size = fmin(abs(end.x-begin.x),abs(end.y-begin.y));
+		CGFloat size = fmin(fabs(end.x-begin.x),fabs(end.y-begin.y));
 		
 		if (negX) 
-			begin.x -= size - abs(end.x - begin.x);
+			begin.x -= size - fabs(end.x - begin.x);
 		if (negY) 
-			begin.y -= size - abs(end.y - begin.y);
+			begin.y -= size - fabs(end.y - begin.y);
 		
 		[path appendBezierPathWithRoundedRect:NSMakeRect(begin.x, begin.y, size, size) 
 									  xRadius:(NSInteger)MIN(size/5, 15)

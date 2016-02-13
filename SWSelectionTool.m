@@ -172,7 +172,7 @@
 			
 			// Create the clipping rect based on these two new points
 			clippingRect = NSMakeRect(fmin(savedPoint.x, point.x), fmin(savedPoint.y, point.y), 
-									  abs(point.x - savedPoint.x), abs(point.y - savedPoint.y));
+									  fabs(point.x - savedPoint.x), fabs(point.y - savedPoint.y));
 
 			if (event == MOUSE_UP) 
 			{
